@@ -1,0 +1,23 @@
+{
+  "img_size": 224,
+  "canais": "1 canal replicado para 3",
+  "intensidade": "por imagem: clip no percentil 99.5 e divisao por ele",
+  "resize_imagem": "INTER_AREA",
+  "resize_mascara": "INTER_NEAREST",
+  "media": [
+    0.485,
+    0.456,
+    0.406
+  ],
+  "desvio": [
+    0.229,
+    0.224,
+    0.225
+  ],
+  "augmentation_treino": "flip horizontal p=0.5; rotacao ate 10 graus; brilho e contraste 0.1",
+  "val_teste": "sem augmentation",
+  "batch": 32,
+  "workers": 2,
+  "seed": 42,
+  "seed_da_divisao": 0
+}
