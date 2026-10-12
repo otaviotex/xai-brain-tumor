@@ -1,0 +1,27 @@
+{
+  "pesos_iniciais": "ResNet18 IMAGENET1K_V1",
+  "camada_final": "Linear(512, 3)",
+  "estrategia_A": "backbone congelada (BatchNorm em eval); treina só a fc",
+  "estrategia_B": "todas as camadas treináveis",
+  "optimizer": "Adam",
+  "lr": {
+    "A": 0.001,
+    "B": 0.0001
+  },
+  "loss": "CrossEntropyLoss com pesos de classe n/(3*n_classe)",
+  "pesos_classe": [
+    1.3359,
+    0.7323,
+    1.1289
+  ],
+  "batch": 32,
+  "epocas_max": 30,
+  "early_stopping_paciencia": 5,
+  "criterio_selecao": "maior Macro F1 de validação",
+  "seed": 42,
+  "melhor_val_macro_f1": {
+    "A": 0.8847372613178912,
+    "B": 0.957141183139123
+  },
+  "estrategia_escolhida": "B"
+}
