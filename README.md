@@ -4,7 +4,7 @@ Este repositório contém o código, os experimentos e os resultados referentes 
 
 ## Autores
 * Arthur Mezzaroba Scartezini
-* Otávio de Paiva Menezes 
+* Ot´avio de Paiva Menezes Teixeira 
 
 ## Fonte do Dataset
 O projeto utiliza o **Figshare Brain Tumor Dataset**, um conjunto público de imagens de ressonância magnética T1 com contraste. 
