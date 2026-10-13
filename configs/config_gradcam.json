@@ -1,0 +1,29 @@
+{
+  "seed": 42,
+  "camada_alvo": "layer4[-1]",
+  "classe_alvo": "prevista (e verdadeira nos erros)",
+  "entrada": "224x224",
+  "limiar_primario": 0.5,
+  "limiares_sensibilidade": [
+    0.3,
+    0.7
+  ],
+  "metricas": [
+    "IoU",
+    "pointing game",
+    "razão de energia"
+  ],
+  "controle": "máscara de outra imagem do teste da mesma classe, rng seed 42",
+  "teste_estatistico": "Wilcoxon pareado",
+  "checkpoint": "resnet18_B_best.pt",
+  "n_teste": 498,
+  "versoes": {
+    "python": "3.13.15",
+    "torch": "2.11.0+cu130",
+    "torchvision": "0.26.0+cu130",
+    "numpy": "2.1.3",
+    "sklearn": "1.6.1",
+    "scipy": "1.16.3",
+    "grad_cam": "1.5.7"
+  }
+}
