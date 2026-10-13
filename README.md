@@ -4,7 +4,7 @@ Este repositório contém o código, os experimentos e os resultados referentes 
 
 ## Autores
 * Arthur Mezzaroba Scartezini
-* Ot´avio de Paiva Menezes Teixeira 
+* Otávio de Paiva Menezes Teixeira 
 
 ## Fonte do Dataset
 O projeto utiliza o **Figshare Brain Tumor Dataset**, um conjunto público de imagens de ressonância magnética T1 com contraste. 
@@ -18,7 +18,7 @@ O projeto utiliza o **Figshare Brain Tumor Dataset**, um conjunto público de im
     ├── data/                     
     │   ├── raw/                  # Dataset original (NÃO INCLUÍDO NO GITHUB)
     │   └── splits/               # CSVs com as divisões de treino, validação e teste
-    ├── docs/                     # Documentação auxiliar (ex: protocolo_xai.md)
+    ├── docs/                     # Documentação auxiliar
     ├── notebooks/                # Jupyter Notebooks com os experimentos
     ├── results/                  # Saídas do modelo
     │   ├── teste/                # Métricas finais e matriz de confusão
@@ -36,7 +36,7 @@ Este projeto foi desenvolvido e homologado utilizando o ambiente do **Google Col
 
 1. **Clone o repositório:**
     Copie o comando abaixo no terminal:
-    git clone https://github.com/SEU_USUARIO/xai-brain-tumor.git
+    git clone https://github.com/otaviotex/xai-brain-tumor.git
     cd xai-brain-tumor
 
 2. **Instale as dependências:**
@@ -50,7 +50,7 @@ Este projeto foi desenvolvido e homologado utilizando o ambiente do **Google Col
     Execute os arquivos na pasta `notebooks/` estritamente na seguinte ordem:
     * **`00_ambiente.ipynb`**: Valida a instalação das bibliotecas, verifica o hardware (CUDA), lê o dataset, faz a análise inicial das imagens e gera os arquivos CSV de divisão (train/val/test) agrupados por paciente.
     * **`01_treino.ipynb`**: Carrega as configurações (de `configs/config_preprocessamento.json` e `configs/config_treino.json`), aplica o pré-processamento, instancia a ResNet18 adaptada, realiza o *fine-tuning* e salva o checkpoint do melhor modelo e os resultados de teste na pasta `results/`.
-    * **`02_xai.ipynb`** (ou notebook equivalente da Etapa 10): Carrega o checkpoint treinado com os pesos congelados, executa o Grad-CAM nas imagens do conjunto de teste e calcula as métricas de explicabilidade definidas no protocolo.
+    * **`02_gradcam.ipynb`** (ou notebook equivalente da Etapa 10): Carrega o checkpoint treinado com os pesos congelados, executa o Grad-CAM nas imagens do conjunto de teste e calcula as métricas de explicabilidade definidas no protocolo.
 
 ## Aviso Importante (Arquivos Ignorados)
 Devido a restrições de tamanho e boas práticas de versionamento, arquivos muito grandes estão listados no `.gitignore` e **não** estão disponíveis no GitHub. Isso inclui:
