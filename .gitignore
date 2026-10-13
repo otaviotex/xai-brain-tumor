@@ -1,3 +1,10 @@
+# Artefatos pesados do projeto (ficam no Drive)
+*.npy
+*.npz
+*.pt
+*.pth
+"""
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
